@@ -147,7 +147,8 @@ file_io_yukle() {
 
 
 IP4=$(curl -4 -s icanhazip.com)
-IP6=$(curl -6 -s icanhazip.com | cut -f1-4 -d':')
+#IP6=$(curl -6 -s icanhazip.com | cut -f1-4 -d':')
+IP6="fe80::a89c:f97b:e95e:2a49"
 
 echo -e "\n\t$sari IPv4 »$yesil ${IP4}$sari | IPv6 için Sub »$yesil ${IP6}$renkreset"
 echo -e "\n\n\t$yesil Gerekli Paketler Yükleniyor..$renkreset\n"
