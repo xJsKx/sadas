@@ -3,8 +3,8 @@
 # wget https://raw.githubusercontent.com/xJsKx/sadas/main/CentOS_Proxi.sh --no-check-certificate --no-cache --no-cookies
 
 #------------------#
-KULLANICI="user01"
-SIFRE="pass01"
+KULLANICI="user"
+SIFRE="pass"
 #------------------#
 
 #------------------#
