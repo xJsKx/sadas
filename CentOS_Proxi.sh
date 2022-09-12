@@ -1,5 +1,6 @@
 #!/bin/sh
 # Bu araç @keyiflerolsun tarafından | @KekikAkademi için yazılmıştır.
+# wget https://raw.githubusercontent.com/xJsKx/sadas/main/CentOS_Proxi.sh --no-check-certificate --no-cache --no-cookies
 
 #------------------#
 KULLANICI="user01"
