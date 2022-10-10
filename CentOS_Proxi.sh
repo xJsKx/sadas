@@ -2,8 +2,8 @@
 # Bu araç @keyiflerolsun tarafından | @KekikAkademi için yazılmıştır.
 # wget https://raw.githubusercontent.com/xJsKx/sadas/main/CentOS_Proxi.sh --no-check-certificate --no-cache --no-cookies
 #------------------#
-KULLANICI="Z0m0x9nX"
-SIFRE="Xas0xp01"
+KULLANICI="user"
+SIFRE="pass"
 #------------------#
 
 #------------------#
