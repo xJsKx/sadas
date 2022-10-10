@@ -11,7 +11,7 @@ IPV4_PORT=3310
 
 IPV6_ILK_PORT=10000
 
-SOCKS5_PORT=5110
+#SOCKS5_PORT=5110
 #------------------#
 
 #------------------#
@@ -205,6 +205,6 @@ bash /etc/rc.local
 squid_yukle && proxy_txt && jq_yukle && file_io_yukle
 
 echo -e "\n$sari IPv4   Proxy »$yesil ${IP4}:${IPV4_PORT}:${KULLANICI}:${SIFRE}$renkreset"
-echo -e "$sari SOCKS5 Proxy »$yesil ${IP4}:${SOCKS5_PORT}:${KULLANICI}:${SIFRE}$renkreset\n"
+#echo -e "$sari SOCKS5 Proxy »$yesil ${IP4}:${SOCKS5_PORT}:${KULLANICI}:${SIFRE}$renkreset\n"
 
 rm -rf /dev/null
