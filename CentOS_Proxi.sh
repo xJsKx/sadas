@@ -2,8 +2,8 @@
 # Bu araç @keyiflerolsun tarafından | @KekikAkademi için yazılmıştır.
 
 #------------------#
-KULLANICI="user"
-SIFRE="pass"
+KULLANICI="user89"
+SIFRE="pass89"
 #------------------#
 
 #------------------#
