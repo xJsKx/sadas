@@ -11,7 +11,7 @@ IPV4_PORT=3310
 
 IPV6_ILK_PORT=20000
 
-SOCKS5_PORT=5110
+#SOCKS5_PORT=5110
 #------------------#
 
 #------------------#
@@ -144,17 +144,17 @@ file_io_yukle() {
     echo -e "$mor IPv6 Zip Şifresi:$yesil ${PASS}$renkreset"
 }
 
-socks5_yukle() {
-    echo -e "\n\n\t$yesil Dante SOCKS5 Yükleniyor..\n$renkreset\n"
+#socks5_yukle() {
+#    echo -e "\n\n\t$yesil Dante SOCKS5 Yükleniyor..\n$renkreset\n"
+#
+#    wget -qO dante_socks.sh https://raw.githubusercontent.com/Lozy/danted/master/install_centos.sh
+#    chmod +x dante_socks.sh
+#    ./dante_socks.sh --port=$SOCKS5_PORT --user=$KULLANICI --passwd=$SIFRE    # >/dev/null
+#    rm -rf dante_socks.sh
 
-    wget -qO dante_socks.sh https://raw.githubusercontent.com/Lozy/danted/master/install_centos.sh
-    chmod +x dante_socks.sh
-    ./dante_socks.sh --port=$SOCKS5_PORT --user=$KULLANICI --passwd=$SIFRE    # >/dev/null
-    rm -rf dante_socks.sh
-
-    iptables -I INPUT -p tcp --dport $SOCKS5_PORT -j ACCEPT
-    iptables-save                                       # >/dev/null
-}
+#    iptables -I INPUT -p tcp --dport $SOCKS5_PORT -j ACCEPT
+#    iptables-save                                       # >/dev/null
+#}
 
 IP4=$(curl -4 -s icanhazip.com)
 IP6=$(curl -6 -s icanhazip.com | cut -f1-4 -d':')
@@ -169,7 +169,7 @@ if [[ $IP6 == "" ]]; then
     clear
     echo -e "\n\n\t$kirmizi Makinenizin IPv6 Desteği Bulunmamaktadır..$renkreset\n"
     echo -e "\n$sari IPv4   Proxy »$yesil ${IP4}:${IPV4_PORT}:${KULLANICI}:${SIFRE}$renkreset"
-    echo -e "$sari SOCKS5 Proxy »$yesil ${IP4}:${SOCKS5_PORT}:${KULLANICI}:${SIFRE}$renkreset\n"
+#    echo -e "$sari SOCKS5 Proxy »$yesil ${IP4}:${SOCKS5_PORT}:${KULLANICI}:${SIFRE}$renkreset\n"
     rm -rf /dev/null
     exit 0
 fi
@@ -202,9 +202,10 @@ EOF
 
 bash /etc/rc.local
 
-squid_yukle && socks5_yukle && proxy_txt && jq_yukle && file_io_yukle
+#squid_yukle && socks5_yukle && proxy_txt && jq_yukle && file_io_yukle
+squid_yukle && proxy_txt && jq_yukle && file_io_yukle
 
 echo -e "\n$sari IPv4   Proxy »$yesil ${IP4}:${IPV4_PORT}:${KULLANICI}:${SIFRE}$renkreset"
-echo -e "$sari SOCKS5 Proxy »$yesil ${IP4}:${SOCKS5_PORT}:${KULLANICI}:${SIFRE}$renkreset\n"
+#echo -e "$sari SOCKS5 Proxy »$yesil ${IP4}:${SOCKS5_PORT}:${KULLANICI}:${SIFRE}$renkreset\n"
 
 rm -rf /dev/null
